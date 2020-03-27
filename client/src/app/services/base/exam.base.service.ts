@@ -207,6 +207,20 @@ export class ExamBaseService {
 
 
     /**
+    * examService.sayHello
+    *   @description Say Hello
+    *
+    */
+    sayHello(...params: any[]): Observable<any> {
+        return this.http
+            .get<any>(this.contextUrl + '/action/hello', {})
+            .pipe(
+                map(response => response)
+            );
+    }
+
+
+    /**
     * examService.validate
     *   @description This API is used to validate the exam
     *   @param String id id of the exam

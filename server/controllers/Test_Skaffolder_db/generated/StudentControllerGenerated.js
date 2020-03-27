@@ -63,6 +63,7 @@ const generatedControllers = {
     router.get(baseUrl + "/findBy_courses/:key", authorize([]), StudentController.findBy_courses);
     router.get(baseUrl + "/:id", authorize([]), StudentController.get);
     router.get(baseUrl + "", authorize([]), StudentController.list);
+    router.get(baseUrl + "/actions/teste", StudentController.teste);
     router.post(baseUrl + "/:id", authorize([]), StudentController.update);
   },
 
@@ -148,7 +149,7 @@ const generatedControllers = {
     }
   },
   
-  
+    
   /**
   * studentModel.update
   *   @description CRUD ACTION update
@@ -167,6 +168,20 @@ const generatedControllers = {
   
   
   // Custom APIs
+
+  /**
+  * studentModel.teste
+  *   @description Teste
+  *
+  */
+  teste: async (req, res) => {
+    try {
+      res.json({});
+    } catch (err) {
+      const safeErr = ErrorManager.getSafeError(err);
+      res.status(safeErr.status).json(safeErr);
+    }
+  },
 
 };
 

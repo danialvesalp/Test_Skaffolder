@@ -37,6 +37,9 @@ import { ExamBaseService } from './base/exam.base.service';
 /**
  * Custom APIs
  *
+ * Service.sayHello
+ *	@description Say Hello
+ *
  * Service.validate
  *	@description This API is used to validate the exam
  *	@param String id id of the exam

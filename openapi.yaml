@@ -688,6 +688,25 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/exam"
+  "/exam/action/hello":
+    get:
+      x-skaffolder-id: 5e7e013d06e8563f3229a9b5
+      x-skaffolder-name: sayHello
+      x-skaffolder-id-resource: 5e78f4ad06e8563f32297eaf
+      x-skaffolder-resource: exam
+      x-skaffolder-crudAction: 
+      x-skaffolder-crudType: 
+      x-skaffolder-description: Say Hello
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /action/hello
+      x-skaffolder-roles:
+      summary: Say Hello
+      tags:
+        - exam
+      responses:
+        "200":
+          description: OK
   "/exam/{id}/validate":
     post:
       x-skaffolder-id: 5e78f5ee06e8563f32297eee
@@ -901,6 +920,25 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/student"
+  "/student/actions/teste":
+    get:
+      x-skaffolder-id: 5e7e029a06e8563f3229a9c7
+      x-skaffolder-name: teste
+      x-skaffolder-id-resource: 5e78f46606e8563f32297e9e
+      x-skaffolder-resource: student
+      x-skaffolder-crudAction: 
+      x-skaffolder-crudType: 
+      x-skaffolder-description: Teste
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /actions/teste
+      x-skaffolder-roles:
+      summary: Teste
+      tags:
+        - student
+      responses:
+        "200":
+          description: OK
   /teacher:
     post:
       x-skaffolder-id: 5e78f56306e8563f32297eca

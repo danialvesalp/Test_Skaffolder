@@ -186,7 +186,7 @@ const generatedModel = {
   async list() {
     return await generatedModel.model.find();
   },
-  
+    
   /**
   * examModel.update
   *   @description CRUD ACTION update

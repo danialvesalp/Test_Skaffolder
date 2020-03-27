@@ -65,6 +65,7 @@ const generatedControllers = {
     router.get(baseUrl + "/findBy_teacher/:key", authorize([]), ExamController.findBy_teacher);
     router.get(baseUrl + "/:id", authorize([]), ExamController.get);
     router.get(baseUrl + "", authorize([]), ExamController.list);
+    router.get(baseUrl + "/action/hello", ExamController.sayHello);
     router.post(baseUrl + "/:id", authorize([]), ExamController.update);
     router.post(baseUrl + "/:id/validate", ExamController.validate);
   },
@@ -183,7 +184,7 @@ const generatedControllers = {
     }
   },
   
-  
+    
   /**
   * examModel.update
   *   @description CRUD ACTION update
@@ -202,6 +203,20 @@ const generatedControllers = {
     
   
   // Custom APIs
+
+  /**
+  * examModel.sayHello
+  *   @description Say Hello
+  *
+  */
+  sayHello: async (req, res) => {
+    try {
+      res.json({});
+    } catch (err) {
+      const safeErr = ErrorManager.getSafeError(err);
+      res.status(safeErr.status).json(safeErr);
+    }
+  },
 
   /**
   * examModel.validate

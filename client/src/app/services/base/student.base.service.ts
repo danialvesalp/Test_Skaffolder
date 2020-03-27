@@ -174,4 +174,18 @@ export class StudentBaseService {
 
     // Custom APIs
 
+
+    /**
+    * studentService.teste
+    *   @description Teste
+    *
+    */
+    teste(...params: any[]): Observable<any> {
+        return this.http
+            .get<any>(this.contextUrl + '/actions/teste', {})
+            .pipe(
+                map(response => response)
+            );
+    }
+
 }
